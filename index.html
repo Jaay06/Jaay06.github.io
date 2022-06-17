@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        background-image: url('bg-intro-mobile.png');
+        background-color: hsl(0, 100%, 74%);
+      }
+      .container {
+        margin: 2rem;
+        /* background-color: pink; */
+        max-width: 1024px;
+      }
+
+      .header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 20px;
+        padding-top: 2rem;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .text-content {
+        font-weight: 400;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        padding-bottom: 50px;
+        margin: 0 1.2rem;
+      }
+
+      .btn {
+        background-color: #3e3c49;
+        width: 100%;
+        border: none;
+        padding: 1rem 4rem;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        -webkit-box-shadow: -1px 4.5px 8.5px 1px #333239;
+        -moz-box-shadow: -1px 4.5px 8.5px 1px #333239;
+        box-shadow: -1px 4.5px 8.5px 1px #333239;
+      }
+
+      .btn:hover {
+        -webkit-box-shadow: inset -1px 4.5px 8.5px 1px #333239;
+        -moz-box-shadow: inset -1px 4.5px 8.5px 1px #333239;
+        box-shadow: inset -1px 4.5px 8.5px 1px #333239;
+      }
+
+      .btn > a {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .bold {
+        font-weight: 600;
+      }
+
+      .main-content {
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 5.5px 5px 12.5px -2.5px #333239;
+      }
+
+      input {
+        padding: 0.7rem;
+        border-radius: 6px;
+        border-width: 1px;
+        border-color: #f5f1f1;
+        margin: 0.3rem 0;
+        font-weight: 600;
+        font-size: 12px;
+        width: 100%;
+      }
+
+      input:required {
+        background-image: url(icon-error.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+
+      .claim-btn {
+        background-color: #38cc8c;
+        width: 100%;
+        border: none;
+        padding: 1rem 1rem;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        text-align: center;
+
+        -webkit-box-shadow: 3.5px 6.5px 10px 3px #49b485;
+        -moz-box-shadow: 3.5px 6.5px 10px 3px #49b485;
+        box-shadow: 3.5px 6.5px 10px 3px #49b485;
+      }
+
+      .claim-btn:hover {
+        -webkit-box-shadow: inset -1px 4.5px 8.5px 1px #49b485;
+        -moz-box-shadow: inset -1px 4.5px 8.5px 1px #49b485;
+        box-shadow: inset -1px 4.5px 8.5px 1px #49b485;
+      }
+
+      .claim-btn > a {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.05rem;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 10px;
+        margin: 0 2rem;
+        color: #c5c3c3;
+      }
+
+      .red-text {
+        color: hsl(0, 100%, 74%);
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      /* mobile */
+
+      @media (min-width: 600px) {
+        .container {
+          max-height: max-content;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        body {
+          background-image: url('bg-intro-desktop.png');
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-direction: row;
+          margin-top: 200px;
+        }
+        .header-container {
+          padding: 2rem;
+        }
+        .header-container > p {
+          text-align: start;
+        }
+        .header {
+          font-size: 3rem;
+          text-align: start;
+          padding: 1rem;
+        }
+      }
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <h2 class="header">Learn to code by watching others</h2>
+        <p class="text-content">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div class="content">
+        <button class="btn">
+          <a href="#">
+            <p>
+              <span class="bold">Try it for free 7days</span>
+              <span class="small">then $20/mo. thereafter</span>
+            </p>
+          </a>
+        </button>
+        <form class="main-content">
+          <input type="text" placeholder="First Name" required blank />
+          <input type="text" placeholder="Last Name" required />
+          <input
+            type="email"
+            name=""
+            id=""
+            placeholder="Email Address"
+            required
+            oninvalid=""
+          />
+          <input
+            type="password"
+            name=""
+            id=""
+            placeholder="Password"
+            required
+          />
+          <button class="claim-btn" type="submit">
+            <a href="#">CLAIM YOUR FREE TRIAL</a>
+          </button>
+          <div class="footer">
+            <p>
+              By clicking the button, you are agreeing to our
+              <span class="red-text">Terms and Services</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

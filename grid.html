@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      body {
+        background-color: darkslategray;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .grid-layout {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: black;
+        padding: 1rem;
+        margin: auto;
+        max-width: 700px;
+      }
+
+      .red {
+        background-color: red;
+        padding: 5rem;
+        grid-column: span 2;
+      }
+
+      .yellow {
+        background-color: orange;
+        padding: 5rem;
+      }
+
+      .green {
+        background-color: green;
+        padding: 2rem;
+        grid-row: span 2;
+      }
+
+      .blue1 {
+        background-color: #0edfee;
+        padding: 3rem;
+        grid-column: span 2;
+      }
+      .blue2 {
+        background-color: #0edfee;
+        padding: 4rem;
+        grid-column: span 2;
+      }
+    </style>
+    <title>Grid Layout</title>
+  </head>
+  <body>
+    <div class="grid-layout">
+      <div class="red"></div>
+      <div class="yellow"></div>
+      <div class="green"></div>
+      <div class="blue1"></div>
+      <div class="blue2"></div>
+    </div>
+  </body>
+</html>
